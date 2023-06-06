@@ -1,4 +1,4 @@
-package algorithm;
+package algorithm.DFS_BFS_Hard;
 
 import java.util.Scanner;
 
@@ -18,17 +18,19 @@ public class part8_2 {
 		for (int i = 0; i < nums.length; i++) {
 			nums[i] = input.nextInt();
 		}
-		dfs(0, 0, nums);
+		dfs(0, 0);
 
 		System.out.print(max);
 	}
 
-	private static void dfs(int L, int sum, int[] arr) {
+	private static void dfs(int L, int sum) {
 		if (N == L) {
-			max = Math.max(max, sum);
+			if (sum <= height) {
+				max = Math.max(max, sum);
+			}
 		} else {
-			dfs(L + 1, sum + arr[L], arr);
-			dfs(L + 1, sum, arr);
+			dfs(L + 1, sum + nums[L]);
+			dfs(L + 1, sum);
 		}
 	}
 }

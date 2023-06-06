@@ -1,4 +1,4 @@
-package algorithm;
+package algorithm.DFS_BFS_Tree;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

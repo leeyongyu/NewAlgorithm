@@ -1,4 +1,4 @@
-package algorithm;
+package algorithm.DFS_BFS_Tree;
 
 public class part7_5 {
 	Node root;
